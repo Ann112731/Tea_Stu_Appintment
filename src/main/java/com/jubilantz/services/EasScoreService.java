@@ -1,0 +1,25 @@
+package com.jubilantz.services;
+
+import com.jubilantz.entity.EasCourse;
+import com.jubilantz.entity.EasScore;
+import com.jubilantz.utils.PageUtil;
+
+import java.util.Date;
+import java.util.List;
+
+
+public interface EasScoreService {
+    int choiceCourse(EasScore easScore);
+
+    int deleteScore(EasScore easScore);
+
+    int updateScore(EasScore easScore) throws Exception;
+
+    int updateScoreByScoreList(List<EasScore> scoreList) throws Exception;
+
+    int getTotalItemsCount(int sId, Integer result);
+
+    List<EasCourse> getCourseListBySid(int sId, Integer result, PageUtil pageUtil);
+
+    Date getStartDateByCourseId(Integer courseId) throws Exception;
+}
